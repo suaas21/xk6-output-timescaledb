@@ -20,4 +20,4 @@ data:
 kind: ConfigMap
 metadata:
   name: crocodile-stress-test
-  namespace: default
+  namespace: k6

@@ -1,4 +1,4 @@
-namespace: test
+namespace: k6
 resources:
   - test-cm.yaml
   - cr-100.yaml
