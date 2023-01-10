@@ -7,7 +7,7 @@ data:
     export const options = {
         stages: [
             { target: 500, duration: '60s' },
-            { target: 0, duration: '30s' },
+            { target: 500, duration: '60s' },
         ],
     };
 
