@@ -4,12 +4,12 @@ metadata:
   name: k6-sample
   namespace: k6
 spec:
-  parallelism: 4
+  parallelism: 2
   script:
     configMap:
       name: crocodile-stress-test
       file: test.js
-  arguments: --out timescaledb --tag testid=101
+  arguments: --out timescaledb --tag testid=102
   runner:
     image: k6-timescaledb:local
     env:
