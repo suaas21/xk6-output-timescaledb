@@ -65,6 +65,10 @@ func getConsolidatedConfig(jsonRawConf json.RawMessage, env map[string]string, c
 		consolidatedConf = consolidatedConf.apply(jsonURLConf)
 	}
 
+	if rUrl, urlDefined := env["K6_TIMESCALE_DB_REMOTE_URL"]; urlDefined {
+		consolidatedConf.URL = null.StringFrom(rUrl)
+	}
+
 	envPushInterval, ok := env["K6_TIMESCALEDB_PUSH_INTERVAL"]
 	if ok {
 		pushInterval, err := time.ParseDuration(envPushInterval)

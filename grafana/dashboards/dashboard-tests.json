@@ -27,7 +27,7 @@
   "liveNow": false,
   "panels": [
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -152,7 +152,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "mytimescaledb",
+        "datasource": "PostgreSQL",
         "definition": "SELECT DISTINCT tags->>'testid' AS \"id\" FROM samples WHERE metric = 'vus';",
         "description": null,
         "error": null,

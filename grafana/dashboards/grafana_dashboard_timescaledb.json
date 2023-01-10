@@ -28,7 +28,7 @@
   "panels": [
     {
       "cacheTimeout": null,
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -123,7 +123,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -217,7 +217,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -312,7 +312,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -406,7 +406,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -499,7 +499,7 @@
       "type": "stat"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "description": "The 95th percentile response time of the target system, with success responses separated from error responses.",
       "fieldConfig": {
         "defaults": {
@@ -650,7 +650,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "description": "Request rate, with successful responses separated from failed ones.",
       "fieldConfig": {
         "defaults": {
@@ -813,7 +813,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "description": "Failure rate.",
       "fieldConfig": {
         "defaults": {
@@ -1009,7 +1009,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1148,7 +1148,7 @@
       "type": "table"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1269,7 +1269,7 @@
       "type": "table"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1416,7 +1416,7 @@
       "type": "table"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "description": "Breakdown of response time into its constituent parts.",
       "fieldConfig": {
         "defaults": {
@@ -1659,7 +1659,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": "mytimescaledb",
+      "datasource": "PostgreSQL",
       "description": "Data sent and received per second.",
       "fieldConfig": {
         "defaults": {
@@ -1823,7 +1823,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "mytimescaledb",
+        "datasource": "PostgreSQL",
         "definition": "",
         "description": null,
         "error": null,
