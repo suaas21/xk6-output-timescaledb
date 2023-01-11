@@ -1,32 +1,27 @@
 apiVersion: v1
 data:
   test.js: |-
+    /*
+    Dummy API : https://run.mocky.io/v3/e237d192-6601-4789-9115-0c527e49856d
+    what is iteration ? -> vu will keep on producing for 10 seconds i.e duration that we have specified
+    Check response 
+    */
+
     import http from "k6/http";
     import { check } from "k6";
-    import { Rate } from "k6/metrics"; // Import Rate form  Metrics
 
-    export let errorRate = new Rate('errors')
+    export default function () {
+        // this function returns response code
+        let response = http.get('https://run.mocky.io/v3/e237d192-6601-4789-9115-0c527e49856d');
 
+        console.log(`response body : ${response.body.length} for number of user ${__VU} and iteration ${__ITER}`)
 
-    export let options = {
-        thresholds:{
-            errors: ['rate<0.1'] // i.e. 10% error
-        }
-    }
-
-    export default function(){
-        let response = http.get('https://run.mocky.io/v3/4a82b3f1-8ee0-4e5f-8ba9-36060a6bda8b');
-        console.log(`${response.body.length}`)
-        const checkRate1 = check(response, {
-            'is response is 200 : ' : (r) => r.status ===200,
+        check(response,{
+            // here use === so along with 200, it also checks for data type ie number === number, string === string.
+            'is response status is 200 : ' : (r) => r.status === 200,
+            'body size is 0 bytes: ' : (r) => r.body.length == 0,
         })
-        errorRate.add(!checkRate1);
-        const checkRate2 = check(response, {
-            'is body length is 20 : ' : (r) => r.body.length ===20,
-        })
-        errorRate.add(!checkRate2);
     }
-
 kind: ConfigMap
 metadata:
   name: crocodile-stress-test
