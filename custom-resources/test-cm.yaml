@@ -1,20 +1,13 @@
 apiVersion: v1
 data:
   test.js: |-
-    import http from 'k6/http';
-    import {check} from 'k6';
-
-    export const options = {
-        stages: [
-            {target: 500, duration: '60s'},
-            {target: 0, duration: '30s'},
-        ],
-    };
-
-    export default function () {
-        const result = http.get('https://test-api.k6.io/public/crocodiles/');
-        check(result, {
-            'http response status code is 200': result.status === 200,
+    import http from "k6/http";
+    import {check} from "k6";
+    export default function () {    
+        let response = http.get('https://run.mocky.io/v3/e237d192-6601-4789-9115-0c527e49856d');
+        check(response, {
+            'is response status is 200 : ': (r) => r.status === 200,
+            'body size is 0 bytes: ': (r) => r.body.length == 0,
         });
     }
 kind: ConfigMap
