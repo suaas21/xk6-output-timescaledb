@@ -1,8 +1,11 @@
 namespace: k6
+# declare ConfigMap as a resource
 resources:
   - configmap.yaml
-  - cr.yaml
+
+# declare ConfigMap from a ConfigMapGenerator
 configMapGenerator:
   - name: crocodile-stress-test
     files:
-      - test-check.js
+      # configfile is used as key
+      - test.js
