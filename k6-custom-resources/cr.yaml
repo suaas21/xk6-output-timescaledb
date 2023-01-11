@@ -1,0 +1,17 @@
+apiVersion: k6.io/v1alpha1
+kind: K6
+metadata:
+  name: k6-sample
+  namespace: k6
+spec:
+  parallelism: 2
+  script:
+    configMap:
+      name: crocodile-stress-test
+      file: test-check.js
+  arguments: --out timescaledb --tag testid=201
+  runner:
+    image: k6-timescaledb:local
+    env:
+      - name: K6_TIMESCALE_DB_REMOTE_URL
+        value: postgresql://postgres:superPassword@timescaledb.timescaledb.svc.cluster.local:5432/postgres

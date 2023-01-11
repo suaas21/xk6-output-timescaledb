@@ -1,8 +1,0 @@
-namespace: k6
-resources:
-#  - configmap.yaml
-  - cr-100.yaml
-#configMapGenerator:
-#  - name: crocodile-stress-test
-#    files:
-#      - test.js
