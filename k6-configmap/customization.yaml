@@ -1,6 +1,7 @@
 namespace: k6
 resources:
   - configmap.yaml
+  - cr.yaml
 configMapGenerator:
   - name: crocodile-stress-test
     files:
