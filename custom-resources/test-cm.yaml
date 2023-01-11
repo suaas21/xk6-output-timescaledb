@@ -5,11 +5,11 @@ data:
     import {check} from "k6";
   
     
-    export default function () {    
-        let response = http.get('https://test-api.k6.io/public/crocodiles/');
+    export default function () {
+        const response = http.get('https://test-api.k6.io/public/crocodiles/');
         check(response, {
             'http response status code is 200': result.status === 200,
-        })
+        });
     }
 kind: ConfigMap
 metadata:
