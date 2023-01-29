@@ -20,11 +20,6 @@ var headerParam = {
         'Content-Type': 'application/json',
     }
 }
-export let options = {
-    vus: 1,
-    duration: '10s',
-    rps: 1
-}
 
 export default function () {
     login()
