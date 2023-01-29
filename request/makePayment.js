@@ -3,12 +3,12 @@ import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
 import { SharedArray } from "k6/data";
 import { sleep, check } from "k6";
 
-const { properties } = require("./resources/properties/config.js")
+const { properties } = require("../resources/properties/config.js")
 const { getInvoice, settlementConfirmPin, settlementVerifyChallenge } = require("./common.js")
-const { userArray, loginToken } = require("./resources/properties/responseData.js")
+const { userArray, loginToken } = require("../resources/properties/responseData.js")
 const merchantNumber = new SharedArray("merchant data", function () {
     // Load CSV file and parse it using Papa Parse , return array
-    return papaparse.parse(open('./resources/properties/merchantNumber.csv'), { header: true }).data;
+    return papaparse.parse(open('../resources/properties/merchantNumber.csv'), { header: true }).data;
 });
 
 let pin

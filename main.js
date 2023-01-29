@@ -7,7 +7,7 @@ const { makePayment } = require("./request/makePayment.js")
 const { sendMoney } = require("./request/sendMoney.js")
 const { getBalance, getActivityLog, getLimit, getPerTransactionLimit, getAppSetting,getTransactionChannel,
     getNotifications, getNotificationsDetails} = require("./request/member.js")
-const { userArray, loginToken } = require("./request/resources/properties/responseData.js")
+const { userArray, loginToken } = require("./resources/properties/responseData.js")
 
 // Set accepted code 
 http.setResponseCallback(

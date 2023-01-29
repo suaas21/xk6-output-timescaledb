@@ -1,7 +1,7 @@
 import http from "k6/http"
 
-const { userArray } = require("./resources/properties/responseData.js")
-const { properties } = require("./resources/properties/config.js")
+const { userArray } = require("../resources/properties/responseData.js")
+const { properties } = require("../resources/properties/config.js")
 
 var headerParam;
 
