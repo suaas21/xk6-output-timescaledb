@@ -7,7 +7,7 @@ spec:
   parallelism: 2
   script:
     localFile: /test/login.js
-  arguments: --out timescaledb --tag testid=251
+  arguments: --out timescaledb --tag testid=253
   runner:
     image: k6-timescaledb:local
     env:
