@@ -5,10 +5,10 @@ import { sleep, check } from "k6";
 
 const { properties } = require("../resources/properties/config.js")
 const { getInvoice, settlementConfirmPin, settlementVerifyChallenge } = require("./common.js")
-const { userArray, loginToken } = require("/test/resources/properties/responseData.js")
+const { userArray, loginToken } = require("../resources/properties/responseData.js")
 const merchantNumber = new SharedArray("merchant data", function () {
     // Load CSV file and parse it using Papa Parse , return array
-    return papaparse.parse(open('/test/resources/properties/merchantNumber.csv'), { header: true }).data;
+    return papaparse.parse(open('../resources/properties/merchantNumber.csv'), { header: true }).data;
 });
 
 let pin
