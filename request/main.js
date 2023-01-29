@@ -9,6 +9,12 @@ const { getBalance, getActivityLog, getLimit, getPerTransactionLimit, getAppSett
     getNotifications, getNotificationsDetails} = require("./member.js")
 const { userArray, loginToken } = require("../resources/properties/responseData.js")
 
+export const options = {
+    vus: 1,
+    duration: '1s',
+    rps: 1
+}
+
 // Set accepted code 
 http.setResponseCallback(
     http.expectedStatuses(200, 401, 404, 429)
