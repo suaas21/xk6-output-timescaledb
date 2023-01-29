@@ -9,7 +9,8 @@ FROM alpine:3.15
 RUN apk add --no-cache ca-certificates && \
     adduser -D -u 12345 -g 12345 k6
 COPY --from=builder /tmp/k6 /usr/bin/k6
-COPY ./test.js /test/test.js
+COPY ./request/ /test/request/
+COPY ./resources/ /test/resources/
 
 USER 12345
 WORKDIR /home/k6
