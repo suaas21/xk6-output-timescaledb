@@ -1,5 +1,5 @@
 import http from "k6/http"
-const { properties } = require("../resources/properties/config.js")
+const { properties } = require("./resources/properties/config.js")
 
 function getInvoice(invoice_id, headerParam) {
     var url = properties.baseUrl + 'settlements/invoices/' + invoice_id

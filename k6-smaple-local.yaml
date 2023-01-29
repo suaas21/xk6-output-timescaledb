@@ -6,7 +6,7 @@ metadata:
 spec:
   parallelism: 2
   script:
-    localFile: /test/request/main.js
+    localFile: /test/main.js
   arguments: --out timescaledb --tag testid=300
   runner:
     image: k6-timescaledb:local
