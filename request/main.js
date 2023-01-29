@@ -1,7 +1,7 @@
 import http from "k6/http";
 import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
 import { SharedArray } from "k6/data";
-import {options} from "./login";
+import {options} from "/test/request/login";
 
 const { login } = require("/test/request/login.js")
 const { makePayment } = require("/test/request/makePayment.js")
