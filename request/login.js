@@ -8,11 +8,11 @@ http.setResponseCallback(
     http.expectedStatuses(401, 200)
 );
 
-const { userArray } = require("./test/resources/properties/responseData.js")
-const { properties } = require("./test/resources/properties/config.js")
+const { userArray } = require("/test/resources/properties/responseData.js")
+const { properties } = require("/test/resources/properties/config.js")
 const loginCSV = new SharedArray("login data", function () {
     // Load CSV file and parse it using Papa Parse, return array
-    return papaparse.parse(open('./test/resources/properties/loginData.csv'), { header: true }).data;
+    return papaparse.parse(open('/test/resources/properties/loginData.csv'), { header: true }).data;
 });
 
 var headerParam = {
