@@ -12,7 +12,7 @@ COPY --from=builder /tmp/k6 /usr/bin/k6
 
 COPY ./request/ /test/request/
 COPY ./resources/ /test/resources/
-COPY ./main.js /test/main.js
+#COPY ./main.js /test/main.js
 
 USER 12345
 WORKDIR /home/k6
