@@ -10,9 +10,9 @@ RUN apk add --no-cache ca-certificates && \
     adduser -D -u 12345 -g 12345 k6
 COPY --from=builder /tmp/k6 /usr/bin/k6
 
-COPY ./request/ /test/
-COPY ./resources/ /test/
-COPY ./main.js /test/
+COPY ./request/ /test/request/
+COPY ./resources/ /test/resources/
+COPY ./main.js /test/main.js
 
 USER 12345
 WORKDIR /home/k6
