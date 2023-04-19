@@ -4,10 +4,10 @@ metadata:
   name: k6-sample
   namespace: k6
 spec:
-  parallelism: 2
+  parallelism: 1
   script:
-    localFile: /test/login.js
-  arguments: --out timescaledb --tag testid=253
+    localFile: /load-testing/request/main.js
+  arguments: --out timescaledb --tag testid=100
   runner:
     image: k6-timescaledb:local
     env:
